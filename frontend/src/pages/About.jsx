@@ -60,8 +60,7 @@ const About = () => {
     <div data-testid="page-about">
       <section className="container-anticiper pt-16 md:pt-24 pb-10">
         <Reveal>
-          <p className="overline">{t.about.overline}</p>
-          <h1 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl text-slate-900 font-light tracking-tight">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-slate-900 font-light tracking-tight">
             {t.about.title}
           </h1>
         </Reveal>

@@ -17,19 +17,11 @@ const Home = () => {
         <div className="container-anticiper pt-20 md:pt-28 pb-20 md:pb-28">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
             <div className="lg:col-span-7">
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="overline"
-              >
-                {t.home.overline} · Est. 2020
-              </motion.p>
               <motion.h1
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.08 }}
-                className="mt-5 font-display font-light text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-slate-900 tracking-tight"
+                className="font-display font-light text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-slate-900 tracking-tight"
               >
                 {t.home.title_1}
                 <br />
@@ -77,8 +69,7 @@ const Home = () => {
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl border border-slate-200/70 shadow-lg p-5 w-64">
-                <p className="font-mono-tactical text-[10px] uppercase tracking-wider text-[#34B2C8]">Signal · Risk · Action</p>
-                <p className="mt-2 font-display text-slate-900 font-semibold leading-snug">
+                <p className="font-display text-slate-900 font-semibold leading-snug">
                   Détecter les signaux faibles avant qu'ils ne deviennent critiques.
                 </p>
               </div>
@@ -112,8 +103,7 @@ const Home = () => {
       {/* 3 piliers */}
       <section className="container-anticiper py-20 md:py-28">
         <div className="max-w-3xl">
-          <p className="overline">{t.home.pillars_overline}</p>
-          <h2 className="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl text-slate-900 font-light leading-tight">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-slate-900 font-light leading-tight">
             {t.home.pillars_title}
           </h2>
         </div>
@@ -156,10 +146,7 @@ const Home = () => {
               <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-[#34B2C8]/30 blur-3xl"></div>
             </div>
             <div className="relative max-w-2xl">
-              <p className="font-mono-tactical text-xs uppercase tracking-wider text-[#34B2C8]">
-                Prenez l'initiative
-              </p>
-              <h3 className="mt-4 font-display text-3xl md:text-4xl font-light leading-tight">
+              <h3 className="font-display text-3xl md:text-4xl font-light leading-tight">
                 Parlons de votre contexte stratégique.
               </h3>
               <p className="mt-4 text-slate-300 leading-relaxed">

@@ -1,5 +1,5 @@
 import React from "react";
-import { AlertTriangle, Activity, Building2, Network } from "lucide-react";
+import { AlertTriangle, Building2, Network } from "lucide-react";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
 
@@ -14,8 +14,7 @@ const Research = () => {
         <div className="grid lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-7">
             <Reveal>
-              <p className="overline">{t.research.overline}</p>
-              <h1 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl text-slate-900 font-light tracking-tight leading-[1.05]">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-slate-900 font-light tracking-tight leading-[1.05]">
                 {t.research.title}
               </h1>
             </Reveal>
@@ -33,7 +32,6 @@ const Research = () => {
           <Reveal className="lg:col-span-4">
             <div className="flex items-center gap-2 text-[#E25A6E]">
               <AlertTriangle size={18} />
-              <p className="font-mono-tactical text-xs uppercase tracking-wider">{t.research.observation_title}</p>
             </div>
             <h2 className="mt-4 font-display text-2xl md:text-3xl text-slate-900 font-semibold leading-tight">
               {t.research.observation_title}
@@ -54,11 +52,7 @@ const Research = () => {
 
       <section className="container-anticiper py-16 md:py-20 border-t border-slate-200/70">
         <Reveal>
-          <div className="flex items-center gap-2 text-[#34B2C8]">
-            <Activity size={18} />
-            <p className="font-mono-tactical text-xs uppercase tracking-wider">Activités</p>
-          </div>
-          <h2 className="mt-4 font-display text-2xl md:text-3xl text-slate-900 font-semibold max-w-3xl leading-tight">
+          <h2 className="font-display text-2xl md:text-3xl text-slate-900 font-semibold max-w-3xl leading-tight">
             {t.research.activities_title}
           </h2>
         </Reveal>

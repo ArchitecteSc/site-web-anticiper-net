@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { ArrowRight, Mail, Phone, MapPin, Check } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Check } from "lucide-react";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
 
@@ -44,8 +44,7 @@ const Contact = () => {
     <div data-testid="page-contact">
       <section className="container-anticiper pt-16 md:pt-24 pb-10">
         <Reveal>
-          <p className="overline">{t.contact.overline}</p>
-          <h1 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl text-slate-900 font-light tracking-tight leading-[1.05] max-w-3xl">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-slate-900 font-light tracking-tight leading-[1.05] max-w-3xl">
             {t.contact.title}
           </h1>
           <p className="mt-6 text-lg text-slate-600 leading-relaxed max-w-2xl">
@@ -130,9 +129,9 @@ const Contact = () => {
 
           <Reveal delay={0.1} className="lg:col-span-5">
             <div className="rounded-3xl bg-slate-50 border border-slate-200/70 p-8 md:p-10">
-              <p className="font-mono-tactical text-xs uppercase tracking-wider text-[#34B2C8]">
+              <h2 className="font-display text-xl text-slate-900 font-semibold">
                 {t.contact.info_title}
-              </p>
+              </h2>
 
               <ul className="mt-8 space-y-6">
                 <li className="flex gap-4">
@@ -144,15 +143,6 @@ const Contact = () => {
                     <a href="mailto:contact@anticiper.net" className="mt-1 block text-slate-900 font-medium hover:text-[#34B2C8]">
                       contact@anticiper.net
                     </a>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="h-10 w-10 shrink-0 rounded-full bg-white border border-slate-200 flex items-center justify-center text-[#34B2C8]">
-                    <Phone size={16} />
-                  </div>
-                  <div>
-                    <p className="text-xs font-mono-tactical uppercase tracking-wider text-slate-500">{t.contact.info_phone}</p>
-                    <p className="mt-1 text-slate-900 font-medium">+33 (0)1 00 00 00 00</p>
                   </div>
                 </li>
                 <li className="flex gap-4">

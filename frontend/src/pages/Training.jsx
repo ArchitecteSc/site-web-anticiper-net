@@ -14,8 +14,7 @@ const Training = () => {
         <div className="grid lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-7">
             <Reveal>
-              <p className="overline">{t.training.overline}</p>
-              <h1 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl text-slate-900 font-light tracking-tight leading-[1.05]">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-slate-900 font-light tracking-tight leading-[1.05]">
                 {t.training.title}
               </h1>
             </Reveal>

@@ -7,7 +7,7 @@ export const translations = {
     nav: {
       home: "Accueil",
       about: "Qui sommes-nous",
-      operations: "Appuis opérationnels",
+      operations: "Appui opérationnel",
       training: "Formation",
       research: "Recherche",
       contact: "Contact",
@@ -65,7 +65,7 @@ export const translations = {
         "L'objectif est de donner des clés permettant de conserver l'initiative de l'action, évitant ainsi de subir les évènements en situation de réaction.",
     },
     operations: {
-      overline: "Appuis opérationnels",
+      overline: "Appui opérationnel",
       title: "Appui opérationnel",
       subtitle:
         "Des dispositifs sur-mesure pour collecter, analyser et exploiter l'information stratégique.",
