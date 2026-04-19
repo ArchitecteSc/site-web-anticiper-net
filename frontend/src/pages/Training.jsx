@@ -10,7 +10,7 @@ const Training = () => {
 
   return (
     <div data-testid="page-training">
-      <section className="container-anticiper pt-16 md:pt-24 pb-12">
+      <section className="container-anticiper pt-6 md:pt-10 pb-12">
         <div className="grid lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-7">
             <Reveal>
