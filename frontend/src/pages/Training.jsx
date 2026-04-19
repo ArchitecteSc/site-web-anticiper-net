@@ -45,14 +45,18 @@ const Training = () => {
               <a
                 href="https://anticiper.app"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 data-testid="webapp-anticiper-link"
-                className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[#34B2C8] hover:text-[#2a9ab0] transition-colors group"
+                aria-label="Découvrir la Web App Anticiper sur anticiper.app (s'ouvre dans un nouvel onglet)"
+                className="group mt-6 inline-flex items-center gap-2 rounded-full bg-white border border-slate-200 pl-5 pr-4 py-2.5 text-sm font-medium text-slate-900 transition-all duration-200 hover:border-[#34B2C8] hover:bg-[#34B2C8] hover:text-white hover:scale-[1.02] active:scale-[0.98] shadow-sm"
               >
-                Pour en savoir plus
-                <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">→</span>
-                <span className="underline-offset-4 group-hover:underline">anticiper.app</span>
+                <span>Découvrir la plateforme</span>
+                <span className="inline-flex items-center gap-1 font-mono-tactical text-[11px] uppercase tracking-wider text-[#34B2C8] group-hover:text-white">
+                  anticiper.app
+                  <ExternalLink size={13} strokeWidth={2.25} />
+                </span>
               </a>
+              <p className="mt-2 text-[11px] text-slate-400">Site externe · s'ouvre dans un nouvel onglet</p>
             </div>
           </Reveal>
         </div>
