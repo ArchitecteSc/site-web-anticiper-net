@@ -6,7 +6,7 @@ export const translations = {
   fr: {
     nav: {
       home: "Accueil",
-      about: "Qui sommes-nous",
+      about: "Qui sommes-nous ?",
       operations: "Appui opérationnel",
       training: "Formation",
       research: "Recherche",
