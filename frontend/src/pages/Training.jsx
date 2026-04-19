@@ -1,5 +1,5 @@
 import React from "react";
-import { Users, Clock, Sparkles, MapPin } from "lucide-react";
+import { Users, Clock, Sparkles, MapPin, ExternalLink } from "lucide-react";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
 
