@@ -1,0 +1,145 @@
+{
+  "project_info": {
+    "name": "Anticiper.net",
+    "type": "vitrine B2B institutionnel",
+    "theme": "light",
+    "archetype": "Swiss & High-Contrast (with Organic & Earthy trust signals for consulting)",
+    "language": "Multilingue FR/EN",
+    "tone": "Soutenu, professionnel, B2B défense/intelligence économique. Sobre, sérieux, crédible."
+  },
+  "palette": {
+    "primary": {
+      "DEFAULT": "#34B2C8",
+      "hover": "#2a9ab0",
+      "description": "Accent cyan/teal pour ponctuer (5% d'utilisation max). PAS de gradients flashy."
+    },
+    "secondary": {
+      "orange": "#F5A623",
+      "coral": "#E25A6E",
+      "description": "Accents secondaires à utiliser avec parcimonie."
+    },
+    "neutral": {
+      "darkest": "#0A0D11",
+      "headings": "slate-900",
+      "paragraphs": "slate-600",
+      "metadata": "slate-500",
+      "background_primary": "white",
+      "background_secondary": "slate-50",
+      "borders": "slate-200/100"
+    }
+  },
+  "typography": {
+    "headings": {
+      "family": "Outfit, sans-serif",
+      "weights": ["300", "500", "700"],
+      "usage": "Titres, h1 à h4. Slate-900."
+    },
+    "body": {
+      "family": "Manrope, sans-serif",
+      "weights": ["400", "500", "600"],
+      "usage": "Paragraphes. Slate-600."
+    },
+    "overlines": {
+      "family": "JetBrains Mono, monospace",
+      "weights": ["700"],
+      "usage": "Surtitres, badges, labels. Mots-clés en gras dans les paragraphes."
+    }
+  },
+  "layout_and_spacing": {
+    "spacing": "Généreux. Utiliser py-20 à py-28 entre les sections.",
+    "grid": "Préférer les layouts asymétriques (ex: bento asymétrique ou 5/7 colonnes) au lieu de tout centrer.",
+    "borders": "Bordures fines, 1px solid slate-200 ou slate-200/60."
+  },
+  "components": {
+    "navbar": {
+      "style": "glass-morphism",
+      "classes": "bg-white/70 backdrop-blur-xl h-16 sticky top-0 z-50 border-b border-slate-200/50",
+      "features": ["Logo", "Navigation links", "Language toggle (FR/EN) as a pill", "Mobile burger menu"]
+    },
+    "cta": {
+      "shape": "pill-shaped (rounded-full)",
+      "color": "bg-[#34B2C8] text-white",
+      "hover": "hover:bg-[#2a9ab0] hover:scale-[1.03] transition-transform",
+      "active": "active:scale-100",
+      "icon": "ArrowRight from lucide-react"
+    },
+    "cards": {
+      "shape": "rounded-2xl",
+      "borders": "border border-slate-200/60",
+      "padding": "p-8 md:p-10",
+      "background": "bg-white or bg-slate-50",
+      "hover": "hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+    },
+    "footer": {
+      "background": "bg-slate-50",
+      "layout": "3 colonnes (Branding, Navigation, Legal)"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "rules": "Jamais d'emoji. Seulement des icônes lucide-react."
+    }
+  },
+  "animations": {
+    "library": "framer-motion",
+    "page_load": "fadeUp stagger effect for lists and grids",
+    "interactions": "Hover scale 1.03, active scale 0.98 for interactive elements."
+  },
+  "pages_structure": {
+    "Home": {
+      "sections": [
+        "Hero: Cabinet de conseil Anticiper (Layout asymétrique, image B&W + touche cyan)",
+        "Piliers: Appui opérationnel / Formation / Recherche (Bento grid asymétrique ou 3 cartes)"
+      ]
+    },
+    "Qui_sommes_nous": {
+      "sections": [
+        "Introduction: Histoire et vision",
+        "Équipe: 6 membres avec portraits"
+      ]
+    },
+    "Appuis_operationnels": {
+      "sections": [
+        "Header de la page",
+        "Liste de 3 offres (cartes détaillées ou alternance gauche/droite)"
+      ]
+    },
+    "Formation": {
+      "sections": [
+        "Introduction",
+        "4 scénarios pédagogiques: Puno, Strategis, Secure Trail, Gestion de crise géopolitique (Grid 2x2)"
+      ]
+    },
+    "Recherche_Technologie": {
+      "sections": [
+        "Présentation",
+        "Partenariats: Université Compiègne / UTC / Costech"
+      ]
+    },
+    "Contact": {
+      "sections": [
+        "Formulaire: nom, entreprise, email, téléphone, message",
+        "Informations de contact"
+      ]
+    }
+  },
+  "media": {
+    "logo": "https://customer-assets.emergentagent.com/job_5cdbc63d-d5b1-4e79-aca3-cba0bfe3b8fa/artifacts/uwhw7jb6_Logo%20Anticiper.png",
+    "images": {
+      "hero_home": "https://images.unsplash.com/photo-1681949287382-052ea3954a51?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBicmFpbnN0b3JtaW5nfGVufDB8fHx8MTc3NjYyMzY0M3ww&ixlib=rb-4.1.0&q=85",
+      "services_appuis": "https://images.pexels.com/photos/7710050/pexels-photo-7710050.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "services_formation": "https://images.unsplash.com/photo-1557023279-753a4ae10313?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwyfHxnZW9wb2xpdGljYWwlMjBtYXAlMjBkYXRhJTIwYW5hbHlzaXN8ZW58MHx8fHwxNzc2NjIzNjQzfDA&ixlib=rb-4.1.0&q=85",
+      "services_recherche": "https://images.pexels.com/photos/15290006/pexels-photo-15290006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "team_meeting": "https://images.unsplash.com/photo-1758691737543-09a1b2b715fa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjB0ZWFtJTIwbWVldGluZ3xlbnwwfHx8fDE3NzY2MjM2NDR8MA&ixlib=rb-4.1.0&q=85"
+    },
+    "treatment": "Traitement Black & White (grayscale) ou désaturé sur les photos, avec des touches de Cyan via l'UI ou des overlays subtils pour se différencier d'anticiper.app."
+  },
+  "differentiation": {
+    "strategy": "Site frère d'anticiper.app, mais avec sa propre personnalité.",
+    "accent": "Utilisation de photos principalement en Noir & Blanc (ou fortement désaturées) avec la couleur Cyan (#34B2C8) venant percuter l'image via des UI elements, des bordures ou des typography accents. JetBrains Mono est utilisé comme signature technique pour les surtitres."
+  },
+  "seo_and_technical": {
+    "open_graph": "1200x630 <300Ko",
+    "meta_tags": "no-store index.html",
+    "testing": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case."
+  }
+}
