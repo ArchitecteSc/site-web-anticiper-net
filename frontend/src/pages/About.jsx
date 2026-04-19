@@ -58,15 +58,7 @@ const About = () => {
 
   return (
     <div data-testid="page-about">
-      <section className="container-anticiper pt-16 md:pt-24 pb-10">
-        <Reveal>
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-slate-900 font-light tracking-tight">
-            {t.about.title}
-          </h1>
-        </Reveal>
-      </section>
-
-      <section className="container-anticiper py-10 md:py-16 border-t border-slate-200/70">
+      <section className="container-anticiper pt-16 md:pt-24 pb-10 md:pb-12">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <Reveal className="lg:col-span-5">
             <h2 className="font-display text-2xl md:text-3xl text-slate-900 font-semibold">
@@ -82,7 +74,12 @@ const About = () => {
         </div>
       </section>
 
-      <section className="container-anticiper py-16 md:py-20">
+      <section className="container-anticiper py-16 md:py-20 border-t border-slate-200/70">
+        <Reveal>
+          <h2 className="font-display text-2xl md:text-3xl text-slate-900 font-semibold mb-10 md:mb-12">
+            {t.about.title}
+          </h2>
+        </Reveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {TEAM.map((m, i) => (
             <Reveal key={m.name} delay={(i % 3) * 0.08}>
