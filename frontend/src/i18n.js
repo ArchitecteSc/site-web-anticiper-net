@@ -102,7 +102,7 @@ export const translations = {
           desc:
             "Vous appartenez à une ONG active au Pérou, spécialisée dans l'extraction de l'or de manière éthique. Les informations que vous parviendrez à collecter en équipe auprès d'un réseau de personnes de confiance seront essentielles pour justifier le maintien de votre mission en Amérique du Sud et déceler les signaux faibles précurseurs d'une attaque en réputation.",
           modalities: ["5 à 20 auditeurs", "1 à 2 jours"],
-          note: "Les joueurs se connectent à notre application Web dédiée « MailGame ». Chaque membre de l'ONG est joué par un binôme. L'IA est utilisée pour accélérer le rythme de production des livrables et leur qualité.",
+          note: "Les joueurs se connectent à notre application Web dédiée« Anticiper ». Chaque membre de l'ONG est joué par un binôme. L'IA sera utiliséepour accélérer le rythme de production des livrables et leur qualité.",
         },
         {
           code: "STRATEGIS",
@@ -111,7 +111,7 @@ export const translations = {
           desc:
             "Vous êtes membre du CODIR d'une entreprise, dont le dirigeant souhaite tripler le chiffre d'affaires sur 5 ans. Vous collectez et analysez les informations nécessaires à l'élaboration de scénarios de croissance et aux chantiers de transformation à mettre en œuvre.",
           modalities: ["5 à 20 auditeurs", "1 à 2 jours"],
-          note: "Les joueurs se connectent à notre application Web dédiée « MailGame ». Chaque membre du CODIR est joué par un binôme.",
+          note: "Les joueurs se connectent à notre application Web dédiée « Anticiper ». Chaque membre du CODIR est joué par un binôme.",
         },
         {
           code: "SECURE TRAIL",
@@ -319,7 +319,7 @@ export const translations = {
           desc:
             "You are a member of the executive committee of a company whose leader wants to triple revenue in 5 years. You collect and analyse the information needed to shape growth scenarios and the transformation initiatives to implement.",
           modalities: ["5 to 20 participants", "1 to 2 days"],
-          note: "Players connect to our dedicated web app \"MailGame\". Each executive is played by a pair.",
+          note: "Players connect to our dedicated web app \"Anticiper\". Each executive is played by a pair.",
         },
         {
           code: "SECURE TRAIL",

@@ -37,11 +37,22 @@ const Training = () => {
             <div className="rounded-2xl bg-slate-50 border border-slate-200/70 p-8">
               <div className="flex items-center gap-2 text-[#34B2C8]">
                 <Sparkles size={18} />
-                <p className="font-mono-tactical text-xs uppercase tracking-wider">Web App MailGame</p>
+                <p className="font-mono-tactical text-xs uppercase tracking-wider">Web App Anticiper</p>
               </div>
               <p className="mt-4 font-display text-lg text-slate-900 leading-snug">
                 Plateforme numérique immersive. Apprentissages par la résolution de problèmes en équipe.
               </p>
+              <a
+                href="https://anticiper.app"
+                target="_blank"
+                rel="noreferrer"
+                data-testid="webapp-anticiper-link"
+                className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[#34B2C8] hover:text-[#2a9ab0] transition-colors group"
+              >
+                Pour en savoir plus
+                <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">→</span>
+                <span className="underline-offset-4 group-hover:underline">anticiper.app</span>
+              </a>
             </div>
           </Reveal>
         </div>
