@@ -16,6 +16,7 @@ const TEAM = [
     role_fr: "Directeur des opérations",
     role_en: "Chief Operating Officer",
     img: "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/0lofi39l_Hassib.JPG",
+    imgPosition: "center 15%",
     bio_fr: `Abdul Hassib Sediqi est directeur des opérations du cabinet de conseil Anticiper. Ancien officier général afghan, il a dirigé des services de sécurité, de renseignement et de gestion des risques dans un environnement marqué par la menace terroriste et de fortes contraintes politiques. Il y a conduit des réformes d'organisation, modernisé les méthodologies d'analyse, mis en place des dispositifs de gestion de crise et piloté de nombreux partenariats avec des acteurs étatiques et internationaux. Diplômé d'un Master en sécurité internationale de Sciences-Po Paris et d'une licence de droit de l'Université Lumière Lyon 2, il a également été formé à la Joint Special Operations University (Tampa, FL) et à la Naval Postgraduate School (Monterey, CA). Depuis 2022, il enseigne à Sciences-Po Lyon, à l'ILERI et à l'Université Catholique de Lyon.`,
     bio_en: `Abdul Hassib Sediqi is Anticiper's COO. A former Afghan general officer, he led security, intelligence and risk-management services in an environment marked by terrorist threats and high political constraints. He drove organisational reforms, modernised analytical methodologies, put in place crisis-management dispositions and led numerous partnerships with state and international actors. He holds a Master's degree in international security from Sciences-Po Paris and a law degree from Université Lumière Lyon 2, and was trained at the Joint Special Operations University (Tampa, FL) and Naval Postgraduate School (Monterey, CA). Since 2022 he has been lecturing at Sciences-Po Lyon, ILERI and the Catholic University of Lyon.`,
   },
@@ -91,6 +92,7 @@ const About = () => {
                   <img
                     src={m.img}
                     alt={m.name}
+                    style={m.imgPosition ? { objectPosition: m.imgPosition } : undefined}
                     className="w-full h-full object-cover photo-bw group-hover:scale-[1.02] transition-transform duration-500"
                     loading="lazy"
                   />
