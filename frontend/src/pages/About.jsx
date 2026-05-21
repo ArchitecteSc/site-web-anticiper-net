@@ -98,6 +98,9 @@ const About = () => {
                       style={{
                         objectPosition: m.imgPosition || undefined,
                         imageRendering: "auto",
+                        filter: "blur(0.4px) contrast(1.04) saturate(1.05)",
+                        transform: "translateZ(0)",
+                        WebkitBackfaceVisibility: "hidden",
                       }}
                       className="w-full h-full object-cover"
                       loading="lazy"
