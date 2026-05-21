@@ -97,4 +97,9 @@ html { scroll-behavior: smooth; }
         transition: filter 400ms ease;
     }
     .photo-bw:hover { filter: grayscale(60%) contrast(1.05); }
+
+    img {
+        image-rendering: auto;
+        -ms-interpolation-mode: bicubic;
+    }
 }

@@ -89,12 +89,17 @@ const About = () => {
                 data-testid={`team-card-${i}`}
               >
                 <div className="flex items-center gap-4">
-                  <div className="h-20 w-20 shrink-0 rounded-full overflow-hidden bg-slate-100 ring-1 ring-slate-200">
+                  <div className="h-24 w-24 shrink-0 rounded-full overflow-hidden bg-slate-100 ring-1 ring-slate-200">
                     <img
                       src={m.img}
                       alt={m.name}
-                      style={m.imgPosition ? { objectPosition: m.imgPosition } : undefined}
-                      className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-500"
+                      width="192"
+                      height="192"
+                      style={{
+                        objectPosition: m.imgPosition || undefined,
+                        imageRendering: "auto",
+                      }}
+                      className="w-full h-full object-cover"
                       loading="lazy"
                       decoding="async"
                     />
