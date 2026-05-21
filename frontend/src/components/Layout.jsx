@@ -12,7 +12,7 @@ const Layout = () => {
   }, [pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1 pt-16">
         <AnimatePresence mode="wait">

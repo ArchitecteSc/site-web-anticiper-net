@@ -9,6 +9,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
     color: #0f172a;
     background-color: #ffffff;
+    background-image:
+        radial-gradient(circle at 90% 8%, rgba(52, 178, 200, 0.07), transparent 40%),
+        radial-gradient(circle at 8% 92%, rgba(245, 166, 35, 0.05), transparent 38%),
+        radial-gradient(circle at 5% 10%, rgba(52, 178, 200, 0.04), transparent 30%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 html { scroll-behavior: smooth; }
