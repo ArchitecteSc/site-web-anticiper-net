@@ -99,7 +99,73 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3 piliers */}
+      {/* Notre Approche */}
+      <section className="container-anticiper py-20 md:py-28">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <Reveal className="lg:col-span-5">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-slate-900 font-light leading-[1.05] tracking-tight">
+              {t.home.approach_title}
+            </h2>
+            <div className="mt-6 h-1 w-16 bg-[#34B2C8] rounded-full" />
+          </Reveal>
+
+          <div className="lg:col-span-7">
+            <Reveal delay={0.05}>
+              <blockquote className="relative pl-6 border-l-2 border-slate-900">
+                <p className="font-display text-xl md:text-2xl text-slate-900 italic leading-snug">
+                  {t.home.approach_quote}
+                </p>
+              </blockquote>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <p className="mt-8 text-slate-600 leading-relaxed text-base md:text-lg italic">
+                {t.home.approach_text_1}
+                <strong className="not-italic font-semibold text-slate-900">{t.home.approach_text_strong_1}</strong>
+                {t.home.approach_text_2}
+                <strong className="not-italic font-semibold text-slate-900">{t.home.approach_text_strong_2}</strong>
+                {t.home.approach_text_3}
+              </p>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Nos Prestations */}
+      <section className="bg-slate-50 border-y border-slate-200/70">
+        <div className="container-anticiper py-20 md:py-28">
+          <Reveal>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-slate-900 font-light leading-tight tracking-tight">
+              {t.home.services_title}
+            </h2>
+          </Reveal>
+
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
+            {t.home.services.map((s, i) => (
+              <Reveal key={s.step} delay={i * 0.08}>
+                <article
+                  className="relative h-full rounded-2xl bg-white border border-slate-200/70 overflow-hidden flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                  data-testid={`service-${i}`}
+                >
+                  <div className="px-8 md:px-10 py-6 bg-[#34B2C8]/8 border-b border-[#34B2C8]/15">
+                    <p
+                      className="font-display text-3xl md:text-4xl font-semibold leading-none"
+                      style={{ color: "#34B2C8" }}
+                    >
+                      {s.step}
+                    </p>
+                  </div>
+                  <div className="px-8 md:px-10 py-8 flex-1 flex flex-col">
+                    <h3 className="font-display text-xl md:text-2xl text-slate-900 font-semibold leading-tight">
+                      {s.title}
+                    </h3>
+                    <p className="mt-4 text-slate-600 leading-relaxed">{s.desc}</p>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="container-anticiper py-20 md:py-28">
         <div className="max-w-3xl">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-slate-900 font-light leading-tight">

@@ -50,6 +50,33 @@ export const translations = {
         scenarios: "scénarios pédagogiques",
         partners: "partenaires académiques",
       },
+      approach_overline: "Notre Approche",
+      approach_title: "Notre Approche",
+      approach_quote:
+        "Une entreprise formée économise ses moyens et concentre ses efforts là où ils sont réellement nécessaires.",
+      approach_text_1: "Nous formons les entreprises pour qu'elles puissent répondre de manière ",
+      approach_text_strong_1: "autonome",
+      approach_text_2: " à leurs besoins en informations stratégiques et en ",
+      approach_text_strong_2: "matière de protection",
+      approach_text_3: " — et, si nécessaire, recourir de manière pertinente à nos services d'anticipation, de protection ou d'influence.",
+      services_title: "Nos Prestations",
+      services: [
+        {
+          step: "01",
+          title: "Former",
+          desc: "Transmettre des méthodes solides et des réflexes durables en matière d'intelligence économique.",
+        },
+        {
+          step: "02",
+          title: "Structurer",
+          desc: "Mettre en place des dispositifs concrets adaptés à l'entreprise en matière d'anticipation, de recherche d'informations et de protection.",
+        },
+        {
+          step: "03",
+          title: "Déployer",
+          desc: "Prendre le relais opérationnel pour obtenir l'information nécessaire, décrypter une situation à risque ou renforcer la communication d'influence.",
+        },
+      ],
     },
     about: {
       overline: "Notre équipe",
@@ -258,6 +285,33 @@ export const translations = {
         scenarios: "teaching scenarios",
         partners: "academic partners",
       },
+      approach_overline: "Our approach",
+      approach_title: "Our approach",
+      approach_quote:
+        "A trained company saves its means and focuses its efforts where they are truly needed.",
+      approach_text_1: "We train companies so they can ",
+      approach_text_strong_1: "autonomously",
+      approach_text_2: " meet their needs in strategic information and ",
+      approach_text_strong_2: "protection",
+      approach_text_3: " — and, when relevant, draw on our anticipation, protection or influence services.",
+      services_title: "Our services",
+      services: [
+        {
+          step: "01",
+          title: "Train",
+          desc: "Transfer robust methods and lasting reflexes in economic intelligence.",
+        },
+        {
+          step: "02",
+          title: "Structure",
+          desc: "Put in place concrete dispositions tailored to the company in matters of anticipation, information research and protection.",
+        },
+        {
+          step: "03",
+          title: "Deploy",
+          desc: "Take operational lead to gather the required information, decipher a risk situation or reinforce influence communication.",
+        },
+      ],
     },
     about: {
       overline: "Our team",
