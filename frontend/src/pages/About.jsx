@@ -88,13 +88,13 @@ const About = () => {
                 className="group rounded-2xl border border-slate-200/70 bg-white p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                 data-testid={`team-card-${i}`}
               >
-                <div className="flex items-center gap-4">
-                  <div className="h-24 w-24 shrink-0 rounded-full overflow-hidden bg-slate-100 ring-1 ring-slate-200">
+                <div className="flex flex-col items-center text-center">
+                  <div className="h-40 w-40 shrink-0 rounded-full overflow-hidden bg-slate-100 ring-1 ring-slate-200 shadow-sm">
                     <img
                       src={m.img}
                       alt={m.name}
-                      width="192"
-                      height="192"
+                      width="320"
+                      height="320"
                       style={{
                         objectPosition: m.imgPosition || undefined,
                         imageRendering: "auto",
@@ -104,16 +104,14 @@ const About = () => {
                       decoding="async"
                     />
                   </div>
-                  <div className="min-w-0">
-                    <h3 className="font-display text-lg font-semibold text-slate-900 leading-tight">
-                      {m.name}
-                    </h3>
-                    <p className="mt-1 font-mono-tactical text-[10px] uppercase tracking-wider text-[#34B2C8] leading-snug">
-                      {lang === "fr" ? m.role_fr : m.role_en}
-                    </p>
-                  </div>
+                  <h3 className="mt-5 font-display text-xl font-semibold text-slate-900 leading-tight">
+                    {m.name}
+                  </h3>
+                  <p className="mt-1.5 font-mono-tactical text-[11px] uppercase tracking-wider text-[#34B2C8]">
+                    {lang === "fr" ? m.role_fr : m.role_en}
+                  </p>
                 </div>
-                <p className="mt-5 text-sm text-slate-600 leading-relaxed">
+                <p className="mt-6 text-sm text-slate-600 leading-relaxed">
                   {lang === "fr" ? m.bio_fr : m.bio_en}
                 </p>
               </article>
