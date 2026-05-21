@@ -175,8 +175,8 @@ const Home = () => {
 
         <div className="mt-14 grid md:grid-cols-2 gap-6">
           {[
-            { Icon: Target, title: t.home.pillar_operations_title, desc: t.home.pillar_operations_desc, cta: t.home.pillar_operations_cta, to: "/appuis-operationnels", accent: "#34B2C8" },
             { Icon: GraduationCap, title: t.home.pillar_training_title, desc: t.home.pillar_training_desc, cta: t.home.pillar_training_cta, to: "/formation", accent: "#F5A623" },
+            { Icon: Target, title: t.home.pillar_operations_title, desc: t.home.pillar_operations_desc, cta: t.home.pillar_operations_cta, to: "/appuis-operationnels", accent: "#34B2C8" },
           ].map((p, i) => (
             <Reveal key={p.title} delay={i * 0.1}>
               <div className="card-anticiper h-full flex flex-col" data-testid={`pillar-${i}`}>
