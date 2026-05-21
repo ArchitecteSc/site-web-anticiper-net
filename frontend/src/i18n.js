@@ -98,14 +98,14 @@ export const translations = {
         "Des dispositifs sur-mesure pour collecter, analyser et exploiter l'information stratégique.",
       items: [
         {
-          title: "Appui à la mise en place d'une cellule de veille",
-          desc:
-            "Anticiper propose une méthodologie et met en œuvre des outils permettant aux entreprises de collecter et d'analyser de manière autonome l'information stratégique nécessaire à leur développement.",
-        },
-        {
           title: "Collecte et analyse d'informations stratégiques pour les entreprises",
           desc:
             "Identifier et suivre les évolutions de son écosystème externe pour mieux l'influencer et accélérer ses ventes (Due Diligence, veille stratégique, enquête de réputation, renseignement financier).",
+        },
+        {
+          title: "Appui à la mise en place d'une cellule de veille",
+          desc:
+            "Anticiper propose une méthodologie et met en œuvre des outils permettant aux entreprises de collecter et d'analyser de manière autonome l'information stratégique nécessaire à leur développement.",
         },
         {
           title: "Protection de marques",
@@ -333,14 +333,14 @@ export const translations = {
         "Tailored capabilities to collect, analyse and leverage strategic information.",
       items: [
         {
-          title: "Setting up an intelligence cell",
-          desc:
-            "Anticiper provides a methodology and tools that enable companies to autonomously collect and analyse the strategic information needed for their development.",
-        },
-        {
           title: "Strategic information collection & analysis for companies",
           desc:
             "Identify and track changes in your external ecosystem to influence it better and accelerate sales (Due Diligence, strategic monitoring, reputation investigation, financial intelligence).",
+        },
+        {
+          title: "Setting up an intelligence cell",
+          desc:
+            "Anticiper provides a methodology and tools that enable companies to autonomously collect and analyse the strategic information needed for their development.",
         },
         {
           title: "Brand protection",
