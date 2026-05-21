@@ -89,8 +89,14 @@ const TEAM = [
     role_fr: "Junior Consultant",
     role_en: "Junior Consultant",
     img: "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/zzkpzowa_Owen.JPG",
-    bio_fr: `Étudiant à l'École de Guerre Économique, Owen Pottiez se spécialise dans les domaines de la collecte de données et l'analyse d'informations. Passionné d'OSINT, il contribue aux missions d'appui informationnel de l'entreprise.`,
-    bio_en: `A student at the École de Guerre Économique, Owen Pottiez specialises in data collection and information analysis. Passionate about OSINT, he contributes to the company's information-support missions.`,
+    bio_fr: [
+      `Étudiant à l'École de Guerre Économique, Owen Pottiez se spécialise dans les domaines de la collecte de données et l'analyse d'informations.`,
+      `Passionné d'OSINT, il contribue aux missions d'appui informationnel de l'entreprise.`,
+    ],
+    bio_en: [
+      `A student at the École de Guerre Économique, Owen Pottiez specialises in data collection and information analysis.`,
+      `Passionate about OSINT, he contributes to the company's information-support missions.`,
+    ],
   },
 ];
 
