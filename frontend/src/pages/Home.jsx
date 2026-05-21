@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
 
-const HERO_IMG = "https://images.unsplash.com/photo-1681949287382-052ea3954a51?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBicmFpbnN0b3JtaW5nfGVufDB8fHx8MTc3NjYyMzY0M3ww&ixlib=rb-4.1.0&q=85";
+const HERO_IMG = "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/12e1896f_Image1.png";
 
 const Home = () => {
   const { t } = useLang();

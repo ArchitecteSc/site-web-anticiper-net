@@ -2,7 +2,7 @@ import React from "react";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
 
-const HERO_IMG = "https://images.pexels.com/photos/7710050/pexels-photo-7710050.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+const HERO_IMG = "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/8i9hldvn_Image%202.png";
 
 const Operations = () => {
   const { t } = useLang();
