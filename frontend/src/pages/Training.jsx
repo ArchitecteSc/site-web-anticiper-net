@@ -3,7 +3,7 @@ import { Users, Clock, Sparkles, MapPin, ExternalLink } from "lucide-react";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
 
-const HERO_IMG = "https://images.unsplash.com/photo-1557023279-753a4ae10313?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwyfHxnZW9wb2xpdGljYWwlMjBtYXAlMjBkYXRhJTIwYW5hbHlzaXN8ZW58MHx8fHwxNzc2NjIzNjQzfDA&ixlib=rb-4.1.0&q=85";
+const HERO_IMG = "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/ody9jtoc_Formation.jpg";
 
 const Training = () => {
   const { t } = useLang();
