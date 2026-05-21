@@ -118,11 +118,11 @@ const Home = () => {
               </blockquote>
             </Reveal>
             <Reveal delay={0.12}>
-              <p className="mt-8 text-slate-600 leading-relaxed text-base md:text-lg italic">
+              <p className="mt-8 text-slate-600 leading-relaxed text-base md:text-lg">
                 {t.home.approach_text_1}
-                <strong className="not-italic font-semibold text-slate-900">{t.home.approach_text_strong_1}</strong>
+                <strong className="font-semibold text-slate-900">{t.home.approach_text_strong_1}</strong>
                 {t.home.approach_text_2}
-                <strong className="not-italic font-semibold text-slate-900">{t.home.approach_text_strong_2}</strong>
+                <strong className="font-semibold text-slate-900">{t.home.approach_text_strong_2}</strong>
                 {t.home.approach_text_3}
               </p>
             </Reveal>

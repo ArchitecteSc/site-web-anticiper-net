@@ -1,5 +1,5 @@
 import React from "react";
-import { ExternalLink, Handshake } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
 
@@ -11,8 +11,8 @@ const Operations = () => {
   return (
     <div data-testid="page-operations">
       <section className="container-anticiper pt-16 md:pt-24 pb-12">
-        <div className="grid lg:grid-cols-12 gap-10 items-end">
-          <div className="lg:col-span-7">
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-7 space-y-6">
             <Reveal>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-slate-900 font-light tracking-tight leading-[1.05]">
                 {t.operations.title}
@@ -21,7 +21,35 @@ const Operations = () => {
                 {t.operations.subtitle}
               </p>
             </Reveal>
+
+            <Reveal delay={0.08}>
+              <div
+                className="rounded-2xl border border-slate-200/70 bg-white p-5 md:p-6"
+                data-testid="operation-bpi-partner"
+              >
+                <p className="font-mono-tactical text-[10px] uppercase tracking-wider text-slate-400">
+                  Partenariat
+                </p>
+                <p className="mt-2 font-display text-base md:text-lg text-slate-900 font-semibold leading-snug">
+                  Anticiper est un Operating Partner de BPI France.
+                </p>
+                <a
+                  href="https://lehub.bpifrance.fr/offre-de-services/accompagnement-operationnel/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="bpi-france-link"
+                  aria-label="En savoir plus sur le site de BPI France (s'ouvre dans un nouvel onglet)"
+                  className="group mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-[#34B2C8] hover:text-[#2a9ab0] transition-colors"
+                >
+                  <span className="underline-offset-4 group-hover:underline">
+                    En savoir plus sur le site de BPI France
+                  </span>
+                  <ExternalLink size={13} strokeWidth={2.25} className="shrink-0" />
+                </a>
+              </div>
+            </Reveal>
           </div>
+
           <Reveal delay={0.1} className="lg:col-span-5">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100">
               <img src={HERO_IMG} alt="Operations" className="w-full h-full object-cover photo-bw" />
@@ -30,59 +58,28 @@ const Operations = () => {
         </div>
       </section>
 
-      <section className="container-anticiper py-16 md:py-24 space-y-8">
-        {t.operations.items.map((it, i) => (
-          <React.Fragment key={i}>
-            <Reveal>
+      <section className="container-anticiper py-12 md:py-16">
+        <Reveal>
+          <h2 className="font-display text-3xl sm:text-4xl text-slate-900 font-light tracking-tight leading-tight">
+            Nos prestations
+          </h2>
+        </Reveal>
+
+        <div className="mt-10 md:mt-12 space-y-6">
+          {t.operations.items.map((it, i) => (
+            <Reveal key={i} delay={i * 0.05}>
               <div
                 className="rounded-3xl border border-slate-200/70 bg-white p-8 md:p-12 transition-all duration-300 hover:shadow-lg"
                 data-testid={`operation-${i}`}
               >
-                <h2 className="font-display text-2xl md:text-3xl text-slate-900 font-semibold leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl text-slate-900 font-semibold leading-tight">
                   {it.title}
-                </h2>
+                </h3>
                 <p className="mt-4 text-slate-600 leading-relaxed max-w-3xl">{it.desc}</p>
               </div>
             </Reveal>
-
-            {i === 0 && (
-              <Reveal delay={0.05}>
-                <div
-                  className="rounded-3xl border border-[#34B2C8]/30 bg-gradient-to-br from-[#34B2C8]/5 to-white p-8 md:p-12 transition-all duration-300 hover:shadow-lg"
-                  data-testid="operation-bpi-partner"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="h-12 w-12 shrink-0 rounded-2xl bg-[#34B2C8]/15 flex items-center justify-center text-[#34B2C8]">
-                      <Handshake size={22} />
-                    </div>
-                    <div className="flex-1">
-                      <p className="font-mono-tactical text-xs uppercase tracking-wider text-[#34B2C8]">
-                        Partenariat
-                      </p>
-                      <h2 className="mt-2 font-display text-2xl md:text-3xl text-slate-900 font-semibold leading-tight">
-                        Anticiper est un Operating Partner de BPI France.
-                      </h2>
-                      <a
-                        href="https://lehub.bpifrance.fr/offre-de-services/accompagnement-operationnel/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        data-testid="bpi-france-link"
-                        aria-label="En savoir plus sur le site de BPI France (s'ouvre dans un nouvel onglet)"
-                        className="group mt-6 inline-flex items-center gap-2 rounded-full bg-[#34B2C8] pl-5 pr-4 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-[#2a9ab0] hover:scale-[1.02] active:scale-[0.98] shadow-sm"
-                      >
-                        <span>En savoir plus sur le site de BPI France</span>
-                        <ExternalLink size={14} strokeWidth={2.25} />
-                      </a>
-                      <p className="mt-2 text-[11px] text-slate-400">
-                        Site externe · lehub.bpifrance.fr
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            )}
-          </React.Fragment>
-        ))}
+          ))}
+        </div>
       </section>
     </div>
   );
