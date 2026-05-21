@@ -88,7 +88,7 @@ const About = () => {
                 className="group rounded-2xl overflow-hidden border border-slate-200/70 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                 data-testid={`team-card-${i}`}
               >
-                <div className="aspect-[4/5] overflow-hidden bg-slate-100">
+                <div className="aspect-square overflow-hidden bg-slate-100">
                   <img
                     src={m.img}
                     alt={m.name}
@@ -102,7 +102,7 @@ const About = () => {
                     {lang === "fr" ? m.role_fr : m.role_en}
                   </p>
                   <h3 className="mt-2 font-display text-xl font-semibold text-slate-900">{m.name}</h3>
-                  <p className="mt-3 text-sm text-slate-600 leading-relaxed line-clamp-6">
+                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">
                     {lang === "fr" ? m.bio_fr : m.bio_en}
                   </p>
                 </div>
