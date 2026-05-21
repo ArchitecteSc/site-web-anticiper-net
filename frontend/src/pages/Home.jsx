@@ -34,7 +34,6 @@ const Home = () => {
                 transition={{ duration: 0.7, delay: 0.18 }}
                 className="mt-10 max-w-xl"
               >
-                <Quote size={22} className="text-[#34B2C8] mb-3" />
                 <p className="text-slate-600 leading-relaxed italic">{t.home.intro}</p>
                 <p className="mt-3 text-slate-600 leading-relaxed italic">{t.home.intro_2}</p>
                 <p className="mt-4 text-sm font-mono-tactical uppercase tracking-wider text-slate-500">
@@ -82,11 +81,10 @@ const Home = () => {
       {/* Metrics bande */}
       <section className="border-y border-slate-200/70 bg-slate-50">
         <div className="container-anticiper py-10">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto text-center">
             {[
               { k: "5+", v: t.home.metrics.years },
               { k: "40+", v: t.home.metrics.clients },
-              { k: "4", v: t.home.metrics.scenarios },
             ].map((m, i) => (
               <Reveal key={i} delay={i * 0.07}>
                 <div data-testid={`metric-${i}`}>
@@ -222,6 +220,13 @@ const Home = () => {
             </div>
           </div>
         </Reveal>
+      </section>
+    </div>
+  );
+};
+
+export default Home;
+l>
       </section>
     </div>
   );
