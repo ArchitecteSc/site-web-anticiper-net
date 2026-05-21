@@ -40,7 +40,6 @@ const Footer = () => {
               <li><Link to="/qui-sommes-nous" className="text-slate-600 hover:text-slate-900">{t.nav.about}</Link></li>
               <li><Link to="/appuis-operationnels" className="text-slate-600 hover:text-slate-900">{t.nav.operations}</Link></li>
               <li><Link to="/formation" className="text-slate-600 hover:text-slate-900">{t.nav.training}</Link></li>
-              <li><Link to="/recherche" className="text-slate-600 hover:text-slate-900">{t.nav.research}</Link></li>
               <li><Link to="/contact" className="text-slate-600 hover:text-slate-900">{t.nav.contact}</Link></li>
             </ul>
           </div>

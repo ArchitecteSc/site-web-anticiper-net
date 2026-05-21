@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Target, GraduationCap, Microscope, Quote } from "lucide-react";
+import { ArrowRight, Target, GraduationCap, Quote } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
@@ -82,12 +82,11 @@ const Home = () => {
       {/* Metrics bande */}
       <section className="border-y border-slate-200/70 bg-slate-50">
         <div className="container-anticiper py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-3 gap-8">
             {[
               { k: "5+", v: t.home.metrics.years },
               { k: "40+", v: t.home.metrics.clients },
               { k: "4", v: t.home.metrics.scenarios },
-              { k: "3", v: t.home.metrics.partners },
             ].map((m, i) => (
               <Reveal key={i} delay={i * 0.07}>
                 <div data-testid={`metric-${i}`}>
@@ -108,11 +107,10 @@ const Home = () => {
           </h2>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-6">
+        <div className="mt-14 grid md:grid-cols-2 gap-6">
           {[
             { Icon: Target, title: t.home.pillar_operations_title, desc: t.home.pillar_operations_desc, cta: t.home.pillar_operations_cta, to: "/appuis-operationnels", accent: "#34B2C8" },
             { Icon: GraduationCap, title: t.home.pillar_training_title, desc: t.home.pillar_training_desc, cta: t.home.pillar_training_cta, to: "/formation", accent: "#F5A623" },
-            { Icon: Microscope, title: t.home.pillar_research_title, desc: t.home.pillar_research_desc, cta: t.home.pillar_research_cta, to: "/recherche", accent: "#0A0D11" },
           ].map((p, i) => (
             <Reveal key={p.title} delay={i * 0.1}>
               <div className="card-anticiper h-full flex flex-col" data-testid={`pillar-${i}`}>

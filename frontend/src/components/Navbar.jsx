@@ -49,7 +49,6 @@ const Navbar = () => {
     { to: "/qui-sommes-nous", label: t.nav.about },
     { to: "/appuis-operationnels", label: t.nav.operations },
     { to: "/formation", label: t.nav.training },
-    { to: "/recherche", label: t.nav.research },
   ];
 
   return (

@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Operations from "./pages/Operations";
 import Training from "./pages/Training";
-import Research from "./pages/Research";
 import Contact from "./pages/Contact";
 import Legal from "./pages/Legal";
 
@@ -22,7 +21,6 @@ function App() {
               <Route path="/qui-sommes-nous" element={<About />} />
               <Route path="/appuis-operationnels" element={<Operations />} />
               <Route path="/formation" element={<Training />} />
-              <Route path="/recherche" element={<Research />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/mentions-legales" element={<Legal />} />
               <Route path="*" element={<Home />} />
