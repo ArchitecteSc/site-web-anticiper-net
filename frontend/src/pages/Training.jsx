@@ -29,11 +29,7 @@ const Training = () => {
 
       <section className="container-anticiper pb-6">
         <div className="grid lg:grid-cols-12 gap-10">
-          <Reveal className="lg:col-span-7 space-y-5 text-slate-600 leading-relaxed text-base md:text-lg">
-            <p>{t.training.intro}</p>
-            <p>{t.training.intro_2}</p>
-          </Reveal>
-          <Reveal delay={0.1} className="lg:col-span-5">
+          <Reveal className="lg:col-span-7 lg:order-1">
             <div className="rounded-2xl bg-slate-50 border border-slate-200/70 p-8">
               <div className="flex items-center gap-2 text-[#34B2C8]">
                 <Sparkles size={18} />
@@ -58,6 +54,10 @@ const Training = () => {
               </a>
               <p className="mt-2 text-[11px] text-slate-400">Site externe · s'ouvre dans un nouvel onglet</p>
             </div>
+          </Reveal>
+          <Reveal delay={0.1} className="lg:col-span-5 lg:order-2 space-y-5 text-slate-600 leading-relaxed text-base">
+            <p>{t.training.intro}</p>
+            <p>{t.training.intro_2}</p>
           </Reveal>
         </div>
       </section>
