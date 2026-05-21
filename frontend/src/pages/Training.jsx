@@ -11,12 +11,16 @@ const Training = () => {
   return (
     <div data-testid="page-training">
       <section className="container-anticiper pt-6 md:pt-10 pb-12">
-        <div className="grid lg:grid-cols-12 gap-10 items-end">
-          <div className="lg:col-span-7">
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-7 space-y-6">
             <Reveal>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-slate-900 font-light tracking-tight leading-[1.05]">
                 {t.training.title}
               </h1>
+            </Reveal>
+            <Reveal delay={0.08} className="space-y-5 text-slate-600 leading-relaxed text-base md:text-lg">
+              <p>{t.training.intro}</p>
+              <p>{t.training.intro_2}</p>
             </Reveal>
           </div>
           <Reveal delay={0.1} className="lg:col-span-5">
@@ -27,39 +31,39 @@ const Training = () => {
         </div>
       </section>
 
-      <section className="container-anticiper pb-6">
-        <div className="grid lg:grid-cols-12 gap-10">
-          <Reveal className="lg:col-span-7 lg:order-1">
-            <div className="rounded-2xl bg-slate-50 border border-slate-200/70 p-8">
-              <div className="flex items-center gap-2 text-[#34B2C8]">
-                <Sparkles size={18} />
-                <p className="font-mono-tactical text-xs uppercase tracking-wider">Web App Anticiper</p>
+      <section className="container-anticiper pb-12">
+        <Reveal>
+          <div className="rounded-2xl bg-slate-50 border border-slate-200/70 p-8 md:p-10">
+            <div className="grid md:grid-cols-12 gap-8 items-center">
+              <div className="md:col-span-8">
+                <div className="flex items-center gap-2 text-[#34B2C8]">
+                  <Sparkles size={18} />
+                  <p className="font-mono-tactical text-xs uppercase tracking-wider">Web App Anticiper</p>
+                </div>
+                <p className="mt-4 font-display text-xl md:text-2xl text-slate-900 leading-snug">
+                  Plateforme numérique immersive. Apprentissages par la résolution de problèmes en équipe.
+                </p>
               </div>
-              <p className="mt-4 font-display text-lg text-slate-900 leading-snug">
-                Plateforme numérique immersive. Apprentissages par la résolution de problèmes en équipe.
-              </p>
-              <a
-                href="https://anticiper.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="webapp-anticiper-link"
-                aria-label="Découvrir la Web App Anticiper sur anticiper.app (s'ouvre dans un nouvel onglet)"
-                className="group mt-6 inline-flex items-center gap-2 rounded-full bg-white border border-slate-200 pl-5 pr-4 py-2.5 text-sm font-medium text-slate-900 transition-all duration-200 hover:border-[#34B2C8] hover:bg-[#34B2C8] hover:text-white hover:scale-[1.02] active:scale-[0.98] shadow-sm"
-              >
-                <span>Découvrir la plateforme</span>
-                <span className="inline-flex items-center gap-1 font-mono-tactical text-[11px] uppercase tracking-wider text-[#34B2C8] group-hover:text-white">
-                  anticiper.app
-                  <ExternalLink size={13} strokeWidth={2.25} />
-                </span>
-              </a>
-              <p className="mt-2 text-[11px] text-slate-400">Site externe · s'ouvre dans un nouvel onglet</p>
+              <div className="md:col-span-4 md:text-right">
+                <a
+                  href="https://anticiper.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="webapp-anticiper-link"
+                  aria-label="Découvrir la Web App Anticiper sur anticiper.app (s'ouvre dans un nouvel onglet)"
+                  className="group inline-flex items-center gap-2 rounded-full bg-white border border-slate-200 pl-5 pr-4 py-2.5 text-sm font-medium text-slate-900 transition-all duration-200 hover:border-[#34B2C8] hover:bg-[#34B2C8] hover:text-white hover:scale-[1.02] active:scale-[0.98] shadow-sm"
+                >
+                  <span>Découvrir la plateforme</span>
+                  <span className="inline-flex items-center gap-1 font-mono-tactical text-[11px] uppercase tracking-wider text-[#34B2C8] group-hover:text-white">
+                    anticiper.app
+                    <ExternalLink size={13} strokeWidth={2.25} />
+                  </span>
+                </a>
+                <p className="mt-2 text-[11px] text-slate-400">Site externe · s'ouvre dans un nouvel onglet</p>
+              </div>
             </div>
-          </Reveal>
-          <Reveal delay={0.1} className="lg:col-span-5 lg:order-2 space-y-5 text-slate-600 leading-relaxed text-base">
-            <p>{t.training.intro}</p>
-            <p>{t.training.intro_2}</p>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
       </section>
 
       <section className="container-anticiper py-16 md:py-24">
