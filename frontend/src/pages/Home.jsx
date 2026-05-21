@@ -226,10 +226,3 @@ const Home = () => {
 };
 
 export default Home;
-l>
-      </section>
-    </div>
-  );
-};
-
-export default Home;
