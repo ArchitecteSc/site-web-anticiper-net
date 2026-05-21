@@ -28,21 +28,21 @@ const Operations = () => {
                 data-testid="operation-bpi-partner"
               >
                 <p className="font-mono-tactical text-[10px] uppercase tracking-wider text-slate-400">
-                  Partenariat
+                  {t.operations.partnership_label}
                 </p>
                 <p className="mt-2 font-display text-base md:text-lg text-slate-900 font-semibold leading-snug">
-                  Anticiper est un Operating Partner de BPI France.
+                  {t.operations.partnership_title}
                 </p>
                 <a
                   href="https://lehub.bpifrance.fr/offre-de-services/accompagnement-operationnel/"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid="bpi-france-link"
-                  aria-label="En savoir plus sur le site de BPI France (s'ouvre dans un nouvel onglet)"
+                  aria-label="BPI France - Operating Partner"
                   className="group mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-[#34B2C8] hover:text-[#2a9ab0] transition-colors"
                 >
                   <span className="underline-offset-4 group-hover:underline">
-                    En savoir plus sur le site de BPI France
+                    {t.operations.partnership_cta}
                   </span>
                   <ExternalLink size={13} strokeWidth={2.25} className="shrink-0" />
                 </a>
@@ -61,7 +61,7 @@ const Operations = () => {
       <section className="container-anticiper py-12 md:py-16">
         <Reveal>
           <h2 className="font-display text-3xl sm:text-4xl text-slate-900 font-light tracking-tight leading-tight">
-            Nos prestations
+            {t.operations.services_title}
           </h2>
         </Reveal>
 

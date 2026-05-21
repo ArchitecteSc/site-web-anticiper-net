@@ -77,6 +77,9 @@ export const translations = {
           desc: "Prendre le relais opérationnel pour obtenir l'information nécessaire, décrypter une situation à risque ou renforcer la communication d'influence.",
         },
       ],
+      floating_badge: "Détecter les signaux faibles avant qu'ils ne deviennent critiques.",
+      final_cta_title: "Parlons de votre contexte stratégique.",
+      final_cta_text: "Notre équipe vous rappelle sous 48 h ouvrées pour qualifier votre besoin.",
     },
     about: {
       overline: "Notre équipe",
@@ -96,6 +99,10 @@ export const translations = {
       title: "Appui opérationnel",
       subtitle:
         "Des dispositifs sur-mesure pour collecter, analyser et exploiter l'information stratégique.",
+      partnership_label: "Partenariat",
+      partnership_title: "Anticiper est un Operating Partner de BPI France.",
+      partnership_cta: "En savoir plus sur le site de BPI France",
+      services_title: "Nos prestations",
       items: [
         {
           title: "Collecte et analyse d'informations stratégiques pour les entreprises",
@@ -312,6 +319,9 @@ export const translations = {
           desc: "Take operational lead to gather the required information, decipher a risk situation or reinforce influence communication.",
         },
       ],
+      floating_badge: "Detect weak signals before they become critical.",
+      final_cta_title: "Let's talk about your strategic context.",
+      final_cta_text: "Our team gets back to you within 48 business hours to qualify your need.",
     },
     about: {
       overline: "Our team",
@@ -331,6 +341,10 @@ export const translations = {
       title: "Operational support",
       subtitle:
         "Tailored capabilities to collect, analyse and leverage strategic information.",
+      partnership_label: "Partnership",
+      partnership_title: "Anticiper is a BPI France Operating Partner.",
+      partnership_cta: "Learn more on the BPI France website",
+      services_title: "Our services",
       items: [
         {
           title: "Strategic information collection & analysis for companies",

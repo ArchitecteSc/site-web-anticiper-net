@@ -70,7 +70,7 @@ const Home = () => {
               {/* Floating badge */}
               <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl border border-slate-200/70 shadow-lg p-5 w-64">
                 <p className="font-display text-slate-900 font-semibold leading-snug">
-                  Détecter les signaux faibles avant qu'ils ne deviennent critiques.
+                  {t.home.floating_badge}
                 </p>
               </div>
               <div className="hidden lg:block absolute -top-4 -right-4 h-24 w-24 rounded-full border border-[#34B2C8]/40"></div>
@@ -211,10 +211,10 @@ const Home = () => {
             </div>
             <div className="relative max-w-2xl">
               <h3 className="font-display text-3xl md:text-4xl font-light leading-tight">
-                Parlons de votre contexte stratégique.
+                {t.home.final_cta_title}
               </h3>
               <p className="mt-4 text-slate-300 leading-relaxed">
-                Notre équipe vous rappelle sous 48 h ouvrées pour qualifier votre besoin.
+                {t.home.final_cta_text}
               </p>
               <Link to="/contact" className="mt-8 btn-primary" data-testid="home-final-cta">
                 {t.nav.cta} <ArrowRight size={16} />
