@@ -104,6 +104,14 @@ html { scroll-behavior: smooth; }
     }
     .photo-bw:hover { filter: grayscale(60%) contrast(1.05); }
 
+    .photo-cyan {
+        filter: grayscale(40%) sepia(60%) hue-rotate(155deg) saturate(1.4) brightness(1.05) contrast(1.02);
+        transition: filter 500ms ease;
+    }
+    .photo-cyan:hover {
+        filter: grayscale(20%) sepia(60%) hue-rotate(155deg) saturate(1.55) brightness(1.06) contrast(1.02);
+    }
+
     img {
         image-rendering: auto;
         -ms-interpolation-mode: bicubic;
