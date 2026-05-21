@@ -73,6 +73,7 @@ const TEAM = [
     role_fr: "Directrice de l'innovation",
     role_en: "Chief Innovation Officer",
     img: "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/3sr2ne2v_Eva.JPG",
+    imgPosition: "center 20%",
     bio_fr: [
       `Ingénieur avec 25 ans d'expérience au sein de la Direction Générale de l'Armement (DGA, ministère des armées), Eva Crück pilote les développements informatiques et les projets d'innovation technologique pour Anticiper.`,
       `Docteur en mathématiques appliquées spécialisée dans l'innovation et la recherche sur le numérique, elle a accompagné des dizaines d'équipes de recherche, de PME et de startups dans la conception et la réalisation de leurs projets.`,
