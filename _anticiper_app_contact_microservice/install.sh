@@ -32,13 +32,21 @@ cp "$SRC_DIR/server.py" "$BACKEND_DIR/server.py"
 cp "$SRC_DIR/requirements.txt" "$BACKEND_DIR/requirements.txt"
 
 if [ ! -f "$BACKEND_DIR/.env" ]; then
-  cp "$SRC_DIR/.env.example" "$BACKEND_DIR/.env"
-  echo -e "${YELLOW}⚠️  .env créé depuis .env.example — il faut le compléter avant le démarrage !${NC}"
+  cat > "$BACKEND_DIR/.env" << 'EOF'
+MONGO_URL=mongodb://localhost:27017
+DB_NAME=anticiper_app
+CORS_ORIGINS=https://anticiper.app,https://www.anticiper.app
+RESEND_API_KEY=re_REMPLACER_PAR_VRAIE_CLE
+SENDER_EMAIL=Anticiper App <noreply@anticiper.net>
+CONTACT_RECIPIENT_EMAIL=thibaut.milewski@anticiper.net
+EOF
+  echo -e "${YELLOW}⚠️  .env créé — il faut coller la vraie clé Resend avant le démarrage !${NC}"
 else
   echo "  .env déjà présent, conservé."
 fi
 
 chown -R www-data:www-data "$BACKEND_DIR"
+chmod 600 "$BACKEND_DIR/.env"
 
 echo -e "${GREEN}=== [2/6] Vérification de Python3 + venv ===${NC}"
 apt-get install -y python3-venv python3-pip > /dev/null 2>&1 || true
