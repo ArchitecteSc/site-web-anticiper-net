@@ -3,6 +3,7 @@ import axios from "axios";
 import { ArrowRight, Mail, MapPin, Check } from "lucide-react";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
+import { Seo } from "../components/Seo";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
@@ -42,6 +43,13 @@ const Contact = () => {
 
   return (
     <div data-testid="page-contact">
+      <Seo
+        title={lang === "fr" ? "Contact" : "Contact"}
+        description={lang === "fr"
+          ? "Contactez Anticiper, cabinet de conseil en intelligence économique : devis, formation, appui opérationnel ou partenariat de recherche. Réponse rapide par notre équipe."
+          : "Contact Anticiper, strategic intelligence consulting firm: quote, training, operational support or research partnership. Quick response from our team."}
+        path="/contact"
+      />
       <section className="container-anticiper pt-16 md:pt-24 pb-10">
         <Reveal>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-slate-900 font-light tracking-tight leading-[1.05] max-w-3xl">

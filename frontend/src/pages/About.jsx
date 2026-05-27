@@ -2,6 +2,7 @@ import React from "react";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
 import { OptimizedImage } from "../components/OptimizedImage";
+import { Seo } from "../components/Seo";
 
 const TEAM = [
   {
@@ -105,8 +106,21 @@ const TEAM = [
 const About = () => {
   const { t, lang } = useLang();
 
+  const seo = lang === "fr"
+    ? {
+        title: "Notre équipe — Experts en intelligence économique",
+        description: "Découvrez l'équipe d'Anticiper : anciens officiers supérieurs, experts du renseignement, spécialistes OSINT et enseignants à l'École de Guerre Économique. Une expertise défense au service des entreprises.",
+        keywords: "équipe intelligence économique, experts OSINT, anciens officiers défense, École de Guerre Économique, Thierry Assonion, cabinet conseil renseignement",
+      }
+    : {
+        title: "Our team — Strategic intelligence experts",
+        description: "Meet the Anticiper team: former senior military officers, intelligence experts, OSINT specialists and lecturers at the École de Guerre Économique. Defence expertise serving companies and institutions.",
+        keywords: "strategic intelligence team, OSINT experts, former defence officers, École de Guerre Économique, intelligence consulting team",
+      };
+
   return (
     <div data-testid="page-about">
+      <Seo title={seo.title} description={seo.description} keywords={seo.keywords} path="/qui-sommes-nous" />
       <section className="container-anticiper pt-16 md:pt-24 pb-10 md:pb-12">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <Reveal className="lg:col-span-5">

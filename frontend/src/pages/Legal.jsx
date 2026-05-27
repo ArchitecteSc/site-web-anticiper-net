@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
 
@@ -129,6 +130,11 @@ const Legal = () => {
   useLang();
   return (
     <div className="container-anticiper pt-16 md:pt-24 pb-24 max-w-4xl" data-testid="page-legal">
+      <Helmet>
+        <title>Mentions légales — Anticiper</title>
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://anticiper.net/mentions-legales" />
+      </Helmet>
       <Reveal>
         <h1 className="font-display text-4xl sm:text-5xl text-slate-900 font-light tracking-tight">
           Mentions légales

@@ -5,12 +5,26 @@ import { motion } from "framer-motion";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
 import { OptimizedImage } from "../components/OptimizedImage";
+import { Seo } from "../components/Seo";
 
 const Home = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+
+  const seo = lang === "fr"
+    ? {
+        title: "Cabinet de conseil en intelligence économique",
+        description: "Anticiper, cabinet de conseil en intelligence économique fondé par d'anciens officiers de la défense. Renseignement d'affaires, veille stratégique, OSINT, détection des signaux faibles, formation et appui opérationnel aux entreprises et institutions.",
+        keywords: "intelligence économique, cabinet de conseil en intelligence économique, renseignement d'affaires, veille stratégique, OSINT, signaux faibles, anticipation stratégique, conseil défense, ADN défense, École de Guerre Économique",
+      }
+    : {
+        title: "Strategic intelligence consulting firm",
+        description: "Anticiper is a strategic intelligence consulting firm founded by former French defence officers. Business intelligence, strategic monitoring, OSINT, weak-signals detection, training and operational support for companies and institutions.",
+        keywords: "strategic intelligence, business intelligence, competitive intelligence, OSINT, strategic monitoring, weak signals, defence consulting, French intelligence consulting",
+      };
 
   return (
     <div data-testid="page-home">
+      <Seo title={seo.title} description={seo.description} keywords={seo.keywords} path="/" />
       {/* Hero asymétrique */}
       <section className="relative overflow-hidden">
         <div className="container-anticiper pt-20 md:pt-28 pb-20 md:pb-28">

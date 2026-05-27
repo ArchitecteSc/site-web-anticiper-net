@@ -3,12 +3,26 @@ import { ExternalLink } from "lucide-react";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
 import { OptimizedImage } from "../components/OptimizedImage";
+import { Seo } from "../components/Seo";
 
 const Operations = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+
+  const seo = lang === "fr"
+    ? {
+        title: "Appui opérationnel en intelligence économique",
+        description: "Mise en place de dispositifs de collecte et d'analyse de l'information stratégique pour entreprises et entités publiques. Veille stratégique, OSINT, due diligence, gestion de crise. Partenaire BPI France.",
+        keywords: "appui opérationnel intelligence économique, veille stratégique, OSINT entreprise, due diligence, gestion de crise, BPI France, accompagnement intelligence économique",
+      }
+    : {
+        title: "Operational support in strategic intelligence",
+        description: "Setting up information collection and analysis systems for companies and public bodies. Strategic monitoring, OSINT, due diligence, crisis management. BPI France partner.",
+        keywords: "strategic intelligence operational support, strategic monitoring, OSINT business, due diligence, crisis management, BPI France",
+      };
 
   return (
     <div data-testid="page-operations">
+      <Seo title={seo.title} description={seo.description} keywords={seo.keywords} path="/appuis-operationnels" />
       <section className="container-anticiper pt-16 md:pt-24 pb-12">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7 space-y-6">

@@ -58,20 +58,29 @@ Site vitrine pour le cabinet de conseil Anticiper, hébergé sur OVH VPS aux cô
 
 ## ✅ Implemented (27/05/2026)
 - Site React SPA complet avec i18n FR/EN
-- Backend FastAPI + MongoDB + Resend
+- Backend FastAPI + MongoDB + Resend (formulaire contact actif → thibaut.milewski@anticiper.net)
 - Déploiement VPS OVH avec Nginx + SSL Let's Encrypt + HSTS
-- Domaine Resend vérifié (DKIM + SPF)
-- Formulaire contact opérationnel
-- Push GitHub (repo public)
-- Documentation déploiement `/app/DEPLOYMENT_VPS.md`
+- Domaine Resend vérifié (DKIM + SPF) sur sous-domaine `send`
+- Push GitHub (repo public `ArchitecteSc/site-web-anticiper-net`)
+- Documentation déploiement `DEPLOYMENT_VPS.md` + `VPS_CHEATSHEET.md`
+- **Optimisation images** : 50 MB → 733 KB (-98%) via WebP + JPEG fallback, composant `OptimizedImage`
+- **Script update.sh** : déploiement en 1 commande `sudo /opt/anticiper-net-repo/update.sh`
+- **SEO complet** :
+  - `react-helmet-async` pour meta tags dynamiques bilingues
+  - Composant `Seo` réutilisable sur chaque page (title, description, keywords, OG, Twitter, canonical, hreflang)
+  - `public/sitemap.xml` (5 URLs)
+  - `public/robots.txt` (autorise tout sauf /api/ et /mentions-legales)
+  - JSON-LD `Organization` Schema.org dans `index.html` (SIRET, fondateur, adresse, knowsAbout)
+  - Mots-clés cibles intégrés : intelligence économique, cabinet de conseil en intelligence économique, renseignement d'affaires, veille stratégique, OSINT, signaux faibles, ADN défense, École de Guerre Économique, BPI France
+  - Mentions légales en `noindex`
 
 ## P1 - Optionnel / À faire si demandé
 - Backup automatique MongoDB (cron mongodump)
-- Sitemap.xml + robots.txt pour SEO
 - Page 404 personnalisée
-- Lazy-loading images équipe (6-8MB par photo, lourd pour le mobile)
 - Webhooks Resend (tracking bounces/spam)
 - Analytics Plausible (RGPD-friendly)
+- Soumettre `https://anticiper.net/sitemap.xml` à Google Search Console + Bing Webmaster Tools (action manuelle user)
+- Vérifier dans Google Search Console le Schema.org Organization (Rich Results Test : https://search.google.com/test/rich-results?url=https://anticiper.net)
 
 ## P2 - Backlog
 - Blog/Actualités

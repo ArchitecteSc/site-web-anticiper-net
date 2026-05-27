@@ -3,12 +3,26 @@ import { Users, Clock, Sparkles, MapPin, ExternalLink } from "lucide-react";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
 import { OptimizedImage } from "../components/OptimizedImage";
+import { Seo } from "../components/Seo";
 
 const Training = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+
+  const seo = lang === "fr"
+    ? {
+        title: "Formation en intelligence économique",
+        description: "Formations en intelligence économique, détection des actions d'ingérence et analyse de l'information stratégique. Plateforme numérique immersive et scénarios pédagogiques pour PME, grandes entreprises et établissements d'enseignement supérieur.",
+        keywords: "formation intelligence économique, formation OSINT, formation veille stratégique, simulation intelligence économique, ingérence économique, signaux faibles formation",
+      }
+    : {
+        title: "Strategic intelligence training",
+        description: "Training in strategic intelligence, detection of interference operations and analysis of strategic information. Immersive digital platform and pedagogical scenarios for SMEs, large companies and higher education institutions.",
+        keywords: "strategic intelligence training, OSINT training, strategic monitoring training, intelligence simulation, weak signals training",
+      };
 
   return (
     <div data-testid="page-training">
+      <Seo title={seo.title} description={seo.description} keywords={seo.keywords} path="/formation" />
       <section className="container-anticiper pt-6 md:pt-10 pb-12">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7 space-y-6">
