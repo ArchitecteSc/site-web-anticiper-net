@@ -1,13 +1,14 @@
 import React from "react";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 const TEAM = [
   {
     name: "Thierry Assonion",
     role_fr: "Président",
     role_en: "President",
-    img: "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/26axfkro_Thierry.JPG",
+    img: "Thierry",
     bio_fr: [
       `Ancien officier supérieur de l'armée de terre, breveté de l'école de guerre, expert du renseignement, Thierry Assonion est le fondateur du cabinet de conseil « Anticiper ».`,
       `Depuis 2020, il apporte son expertise à des entreprises en développement sur de nouveaux marchés ou espaces géographiques ainsi qu'à des établissements de recherche comme l'INRIA ou l'Université Technologique de Compiègne.`,
@@ -25,7 +26,7 @@ const TEAM = [
     name: "Abdul Hassib Sediqi",
     role_fr: "Directeur des opérations",
     role_en: "Chief Operating Officer",
-    img: "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/0lofi39l_Hassib.JPG",
+    img: "Hassib",
     imgPosition: "center 15%",
     bio_fr: [
       `Abdul Hassib Sediqi est directeur des opérations du cabinet de conseil Anticiper. Ancien officier général afghan, il a dirigé des services de sécurité, de renseignement et de gestion des risques dans un environnement marqué par la menace terroriste et de fortes contraintes politiques. Il y a conduit des réformes d'organisation, modernisé les méthodologies d'analyse, mis en place des dispositifs de gestion de crise et piloté de nombreux partenariats avec des acteurs étatiques et internationaux.`,
@@ -40,7 +41,7 @@ const TEAM = [
     name: "Thibaut Milewski",
     role_fr: "Competitive Intelligence Manager",
     role_en: "Competitive Intelligence Manager",
-    img: "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/1cfzdj46_Thibaut.JPG",
+    img: "Thibaut",
     bio_fr: [
       `Diplômé d'un premier master de l'École Supérieure du Commerce Extérieur, puis d'un second master d'Études Stratégiques, Sécurité et Politique de Défense de l'école des Hautes Études Internationales et Politiques, Thibaut Milewski débute sa carrière au sein du Centre Interarmées de Concepts, de Doctrines et d'Expérimentations.`,
       `Spécialiste des dispositifs de simulation et d'exploitation de données représentatives du renseignement, il collabore avec Anticiper depuis 2021, notamment pour l'élaboration et l'animation des formations.`,
@@ -56,7 +57,7 @@ const TEAM = [
     name: "Céline Bougeant",
     role_fr: "Directrice Juridique, Administrative & Financière",
     role_en: "Legal, Administrative & Financial Director",
-    img: "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/dhptfvdr_C%C3%A9line.JPG",
+    img: "Celine",
     bio_fr: [
       `Titulaire d'un DEA en droit des contrats de la Sorbonne (Paris II), et d'une solide expérience commerciale, Céline Bougeant est spécialisée en droit contractuel et droit administratif.`,
       `Elle accompagne la rédaction, la négociation et la gestion de conventions complexes, et supervise les aspects administratifs et financiers, garantissant une gestion cohérente et sécurisée des opérations de l'entreprise.`,
@@ -72,7 +73,7 @@ const TEAM = [
     name: "Eva Crück",
     role_fr: "Directrice de l'innovation",
     role_en: "Chief Innovation Officer",
-    img: "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/3sr2ne2v_Eva.JPG",
+    img: "Eva",
     imgPosition: "center 20%",
     bio_fr: [
       `Ingénieur avec 25 ans d'expérience au sein de la Direction Générale de l'Armement (DGA, ministère des armées), Eva Crück pilote les développements informatiques et les projets d'innovation technologique pour Anticiper.`,
@@ -89,7 +90,7 @@ const TEAM = [
     name: "Owen Pottiez",
     role_fr: "Junior Consultant",
     role_en: "Junior Consultant",
-    img: "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/zzkpzowa_Owen.JPG",
+    img: "Owen",
     bio_fr: [
       `Étudiant à l'École de Guerre Économique, Owen Pottiez se spécialise dans les domaines de la collecte de données et l'analyse d'informations.`,
       `Passionné d'OSINT, il contribue aux missions d'appui informationnel de l'entreprise.`,
@@ -137,8 +138,8 @@ const About = () => {
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="h-40 w-40 shrink-0 rounded-full overflow-hidden bg-slate-100 ring-1 ring-slate-200 shadow-sm">
-                    <img
-                      src={m.img}
+                    <OptimizedImage
+                      name={m.img}
                       alt={m.name}
                       width="320"
                       height="320"
@@ -150,8 +151,6 @@ const About = () => {
                         WebkitBackfaceVisibility: "hidden",
                       }}
                       className="w-full h-full object-cover"
-                      loading="lazy"
-                      decoding="async"
                     />
                   </div>
                   <h3 className="mt-5 font-display text-xl font-semibold text-slate-900 leading-tight">

@@ -2,8 +2,7 @@ import React from "react";
 import { Users, Clock, Sparkles, MapPin, ExternalLink } from "lucide-react";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
-
-const HERO_IMG = "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/ody9jtoc_Formation.jpg";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 const Training = () => {
   const { t } = useLang();
@@ -25,7 +24,12 @@ const Training = () => {
           </div>
           <Reveal delay={0.1} className="lg:col-span-5">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100">
-              <img src={HERO_IMG} alt="Training" className="w-full h-full object-cover photo-bw" />
+              <OptimizedImage
+                name="hero-formation"
+                alt="Training"
+                className="w-full h-full object-cover photo-bw"
+                loading="eager"
+              />
             </div>
           </Reveal>
         </div>

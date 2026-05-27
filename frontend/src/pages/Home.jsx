@@ -4,8 +4,7 @@ import { ArrowRight, Target, GraduationCap, Quote } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLang } from "../i18n";
 import { Reveal } from "../components/Reveal";
-
-const HERO_IMG = "https://customer-assets.emergentagent.com/job_vitrine-anticiper/artifacts/12e1896f_Image1.png";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 const Home = () => {
   const { t } = useLang();
@@ -63,7 +62,12 @@ const Home = () => {
               className="lg:col-span-5 relative"
             >
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-slate-100">
-                <img src={HERO_IMG} alt="Analyse stratégique" className="w-full h-full object-cover photo-cyan" />
+                <OptimizedImage
+                  name="hero-home"
+                  alt="Analyse stratégique"
+                  className="w-full h-full object-cover photo-cyan"
+                  loading="eager"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent" />
               </div>
               {/* Floating badge */}

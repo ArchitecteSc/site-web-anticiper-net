@@ -3,8 +3,7 @@ import { NavLink, Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLang } from "../i18n";
-
-const LOGO = "https://customer-assets.emergentagent.com/job_5cdbc63d-d5b1-4e79-aca3-cba0bfe3b8fa/artifacts/uwhw7jb6_Logo%20Anticiper.png";
+import { OptimizedImage } from "./OptimizedImage";
 
 const LangToggle = () => {
   const { lang, setLang } = useLang();
@@ -60,7 +59,7 @@ const Navbar = () => {
     >
       <div className="container-anticiper h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2" data-testid="navbar-logo">
-          <img src={LOGO} alt="Anticiper" className="h-8 w-8 object-contain" />
+          <OptimizedImage name="logo" alt="Anticiper" fallbackExt="png" loading="eager" className="h-8 w-8 object-contain" />
           <span className="font-display font-semibold text-lg text-slate-900 tracking-tight">Anticiper</span>
         </Link>
 

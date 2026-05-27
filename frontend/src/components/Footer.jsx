@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { useLang } from "../i18n";
-
-const LOGO = "https://customer-assets.emergentagent.com/job_5cdbc63d-d5b1-4e79-aca3-cba0bfe3b8fa/artifacts/uwhw7jb6_Logo%20Anticiper.png";
+import { OptimizedImage } from "./OptimizedImage";
 
 const Footer = () => {
   const { t } = useLang();
@@ -15,7 +14,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-2">
-              <img src={LOGO} alt="Anticiper" className="h-8 w-8" />
+              <OptimizedImage name="logo" alt="Anticiper" fallbackExt="png" className="h-8 w-8" />
               <span className="font-display font-semibold text-slate-900 text-lg">Anticiper</span>
             </div>
             <p className="mt-4 text-sm text-slate-600 max-w-xs leading-relaxed">{t.footer.tagline}</p>
