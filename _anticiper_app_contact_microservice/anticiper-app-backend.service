@@ -1,0 +1,16 @@
+[Unit]
+Description=Anticiper.app contact-form FastAPI micro-service
+After=network.target mongodb.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/anticiper-app-backend
+EnvironmentFile=/opt/anticiper-app-backend/.env
+ExecStart=/opt/anticiper-app-backend/venv/bin/uvicorn server:app --host 127.0.0.1 --port 8201 --workers 1 --proxy-headers
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
