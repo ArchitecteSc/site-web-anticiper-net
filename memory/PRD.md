@@ -1,37 +1,85 @@
-# Anticiper.net — Site vitrine B2B
+# PRD - Site Vitrine anticiper.net
 
-## Problème original
-Créer un nouveau site vitrine `https://anticiper.net` (cabinet de conseil en intelligence économique, formation et recherche), indépendant du projet existant `anticiper.app`, hébergé sur le même VPS OVH mais codebase et déploiement séparés. Design cohérent avec anticiper.app (famille visuelle) mais avec sa propre personnalité. Multilingue FR/EN. Contenu exact de l'actuel anticiper.net. Formulaire de contact.
+## Original Problem Statement
+Site vitrine pour le cabinet de conseil Anticiper, hébergé sur OVH VPS aux côtés de l'app existante `anticiper.app`, en projet totalement indépendant (codebase, repo, routing). React frontend + FastAPI backend (formulaire de contact). Doit hériter de l'identité visuelle d'`anticiper.app` (cyan/slate, fonts Manrope/Outfit/JetBrains) avec un layout propre. Bilingue FR/EN. Déploiement VPS sans casser l'app existante ni la messagerie mailo.com.
+
+## Status: ✅ PRODUCTION DEPLOYED (27/05/2026)
 
 ## Architecture
-- **Frontend** : React 19 + CRA, Tailwind, Shadcn, Framer Motion, react-router-dom v7
-- **Backend** : FastAPI + Motor (MongoDB async) + Resend (emails transactionnels optionnels)
-- **i18n** : provider maison léger (FR/EN) avec persistence localStorage
-- **Charte** : Manrope/Outfit/JetBrains Mono, cyan #34B2C8, photos B&W traitées
+- **Frontend**: React 18 + Tailwind + Framer Motion + Lucide-react + custom i18n.js
+- **Backend**: FastAPI + Motor (async MongoDB) + Pydantic + Resend API
+- **DB**: MongoDB (locale sur VPS) - collection `contact_messages`
+- **Hosting**: OVH VPS Ubuntu 25.04 (IP: 51.38.38.206)
+- **Reverse proxy**: Nginx + Certbot Let's Encrypt SSL
+- **Email**: Resend (eu-west-1) - domaine vérifié `anticiper.net`
 
-## Personas
-- Entreprises françaises (PME, ETI, grands groupes) cherchant une capacité de veille/IE
-- Institutions publiques (recherche, enseignement supérieur) cherchant des formations
-- Commanditaires défense/renseignement cherchant simulation & recherche appliquée
+## Stack technique
+- `fastapi==0.115.6`, `pydantic[email]==2.10.4`, `motor==3.6.0` (compat Python 3.13)
+- Frontend buildé statique servi par Nginx, backend FastAPI sur 127.0.0.1:8101 (proxy /api/)
 
-## Fait (09/02/2026)
-- Setup Tailwind (polices + couleurs charte), reset CSS custom
-- Public index.html avec Google Fonts, OG meta, no-store cache
-- Backend : POST /api/contact (DB+Resend optionnel), GET /api/contact, /api/, /api/health
-- i18n FR/EN complet (800+ lignes de traductions fidèles au contenu de anticiper.net)
-- Navbar glass-morphism + burger mobile + toggle FR/EN
-- Footer 3 colonnes + lien anticiper.app
-- 7 pages : Home (hero asymétrique + 3 piliers + CTA final), Qui sommes-nous (6 membres équipe), Appuis opérationnels, Formation (4 scénarios Puno/Strategis/Secure Trail/Geo-Crisis), Recherche & Technologie, Contact (formulaire complet), Mentions légales
-- Photos B&W + accents cyan pour différencier d'anticiper.app
-- `/app/DEPLOYMENT_VPS.md` : procédure complète VPS (Nginx vhost, Let's Encrypt, script deploy, systemd backend)
-- Tests : 9/9 backend pytest + frontend E2E OK (testing_agent iteration 1)
+## Pages livrées
+- Accueil (Hero "Anticiper les signaux, sécuriser vos décisions" + citation fondateur)
+- Qui sommes-nous (équipe de 6 - photos B&W filter)
+- Appui opérationnel
+- Formation
+- Contact (formulaire fonctionnel → Resend → thibaut.milewski@anticiper.net)
+- Mentions légales / Politique de confidentialité
 
-## Backlog P0/P1/P2
-- **P1** : Image og-image.jpg 1200×630 à uploader dans `public/`
-- **P1** : Adresse postale & téléphone exacts dans Contact
-- **P1** : Adresse email de destination du formulaire (CONTACT_RECIPIENT_EMAIL)
-- **P2** : Clé Resend + domaine vérifié pour envoi réel des emails
-- **P2** : sitemap.xml + robots.txt
-- **P2** : Traduction EN des bios équipe à faire relire
-- **P2** : Google Analytics 4 (si souhaité)
-- **P3** : Convention LICENSE / README pour le repo GitHub dédié
+## DNS finaux (chez Mailo)
+- `@` MX mx-domain.mailo.com (10) — messagerie Mailo
+- `@` TXT v=spf1 a include:mailo.com -all
+- `_dmarc` TXT v=DMARC1; p=quarantine
+- `mailo._domainkey` TXT (DKIM Mailo)
+- `@` A 51.38.38.206 (site)
+- `www` A 51.38.38.206 (site)
+- `resend._domainkey` TXT (DKIM Resend) — Verified ✅
+- `send` MX feedback-smtp.eu-west-1.amazonses.com. (10) — bounces Resend
+- `send` TXT v=spf1 include:amazonses.com ~all — SPF Resend
+
+## Variables environnement VPS (`/opt/anticiper-net-backend/.env`)
+- MONGO_URL=mongodb://localhost:27017
+- DB_NAME=anticiper_net
+- CORS_ORIGINS=https://anticiper.net,https://www.anticiper.net
+- RESEND_API_KEY=re_CjfmSc8X... (clé "Full access" sur Resend nommée `anticiper.net`)
+- SENDER_EMAIL=Anticiper <noreply@anticiper.net>
+- CONTACT_RECIPIENT_EMAIL=thibaut.milewski@anticiper.net
+
+## Endpoints API
+- POST /api/contact (saves to Mongo + sends via Resend)
+
+## Infrastructure VPS
+- Backend systemd: `anticiper-net-backend.service` (port 8101)
+- Nginx vhost: `/etc/nginx/sites-enabled/anticiper.net`
+  - HTTP → 301 HTTPS
+  - HTTPS SSL Let's Encrypt (renouvellement auto)
+  - HSTS: max-age=31536000; includeSubDomains
+- SSL valid until 24/08/2026 (auto-renew configured)
+- Frontend build dans `/var/www/anticiper.net`
+
+## ✅ Implemented (27/05/2026)
+- Site React SPA complet avec i18n FR/EN
+- Backend FastAPI + MongoDB + Resend
+- Déploiement VPS OVH avec Nginx + SSL Let's Encrypt + HSTS
+- Domaine Resend vérifié (DKIM + SPF)
+- Formulaire contact opérationnel
+- Push GitHub (repo public)
+- Documentation déploiement `/app/DEPLOYMENT_VPS.md`
+
+## P1 - Optionnel / À faire si demandé
+- Backup automatique MongoDB (cron mongodump)
+- Sitemap.xml + robots.txt pour SEO
+- Page 404 personnalisée
+- Lazy-loading images équipe (6-8MB par photo, lourd pour le mobile)
+- Webhooks Resend (tracking bounces/spam)
+- Analytics Plausible (RGPD-friendly)
+
+## P2 - Backlog
+- Blog/Actualités
+- Newsletter
+- Page Études de cas
+- Notifications Slack/SMS sur nouveau message
+
+## Notes critiques
+- VPS héberge AUSSI `anticiper.app` (business critical) → ne jamais toucher `/var/www/anticiper.app`
+- Messagerie Mailo critique → ne jamais toucher MX `@` / TXT SPF `@` / DMARC / DKIM Mailo
+- Repo GitHub public (push effectué)
